@@ -1,0 +1,7 @@
+output "ecr_repository_url" {
+  value = aws_ecr_repository.weather_repo.repository_url
+}
+
+output "service_url" {
+  value = "http://${aws_ecs_service.weather_service.name}.${aws_ecs_service.weather_service.cluster}.elb.amazonaws.com"
+}
